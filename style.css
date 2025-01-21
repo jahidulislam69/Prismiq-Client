@@ -456,10 +456,11 @@ footer {
     border-radius: 40%;
 }
 /* Mobile First (320px and below) */
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width: 414px) {
     /* Navigation */
     nav {
         padding: 10px;
+
     }
     nav img {
         width: 120px;
@@ -471,7 +472,7 @@ footer {
     /* Page 1 */
     #page1 {
         padding-top: 80px;
-        height: 555px;
+        min-height: auto;
     }
     #page1 .text-p h6 {
         font-size: 14px;
@@ -589,8 +590,18 @@ footer {
     footer {
         height: auto;
     }
+    .footer1{
+        height: 40%;
+    }
     .footer1, .footer2 {
         flex-direction: column;
+
+    }
+    .footer1 .foot-image img{
+        display: none;
+    }
+    .footer2 img{
+        display: none;
     }
     .footer1 .footer-text1 {
         width: 100%;
@@ -601,69 +612,220 @@ footer {
         width: 100%;
         padding: 20px;
     }
+    .footer2 .left-text{
+        text-align: center;
+    }
+    .footer2 .left-text h5{
+        font-size: 20px;
+    }
+    .footer2 .left-text h6{
+        font-size: 25px;
+    }
 }
 /* Tablets (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
     /* Navigation */
     nav {
         padding: 15px;
+
     }
     nav img {
-        width: 160px;
+        width: 140px;
+    }
+    nav .icons {
+        padding: 0 20px;
     }
     nav .icons a i {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     /* Page 1 */
     #page1 {
-        padding-top: 100px;
-        height: 650px;
+        padding-top: 80px;
+        min-height: 100vh;
     }
     #page1 .text-p h6 {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 10px;
     }
     #page1 .text-p h2 {
-        font-size: 32px;
+        font-size: 36px;
+        text-align: center;
     }
     #page1 .content {
         width: 90%;
-        height: 60%;
+        padding: 20px;
+        margin: 20px auto;
     }
     .services-grid {
-        gap: 40px;
+        gap: 25px;
+        padding: 15px;
     }
     .service-box {
-        width: 50px;
-        height: 130px;
+        width: calc(33.33% - 20px);
+        min-height: 120px;
+        padding: 10px;
     }
     .service-box .service-img {
-        width: 20px !important;
-        height: 20px !important;
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 10px;
     }
     .service-box p {
-        font-size: 12px !important;
+        font-size: 14px !important;
     }
     #page1 .last {
-        font-size: 14px;
+        font-size: 16px;
         width: 80%;
+        text-align: center;
+        margin: 25px auto;
     }
 
-    /* Page 2-6 common styles */
-    #page2, #page3, #page4, #page5, #page6 {
-        padding: 40px 25px;
+    /* Page 2 */
+    #page2 {
+        padding: 40px 20px;
     }
     #page2 .page2-text h2 {
-        font-size: 25px;
+        font-size: 32px;
+        line-height: 1.3;
+        margin-bottom: 15px;
     }
     #page2 .page2-text h6 {
-        font-size: 10px;
-    text-align: center;
+        font-size: 14px;
+        max-width: 80%;
+        margin: 0 auto;
     }
     #page2 .image2-cont img {
-        width: 80%;
-        height: 160px;
+        width: 70%;
+        height: auto;
+        margin-top: 30px;
     }
+
+    /* Page 3 & 4 */
+    #page3, #page4 {
+        padding: 50px 20px;
+    }
+    .page3-container, .page4-container {
+        gap: 30px;
+    }
+    #page3 img, #page4 img{
+        width: 60%;
+    }
+    .image-Cont {
+        max-width: 300px;
+        text-align: center;
+    }
+    .service-box-c p {
+        font-size: 14px;
+        width: 90%;
+    }
+    #page4 p{
+       
+        text-align: center;
+    }
+
+    /* Page 5 */
+    #page5 h1 {
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+    #page5 .page5-img-cont {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #page5 .page5-img-cont img {
+        width: 45%;
+    }
+    #page5 p {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    /* Page 6 */
+    #page6 {
+        padding: 50px 20px;
+    }
+    #page6 h3 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    .client-feedback {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .client-1 {
+        flex: 0 1 calc(50% - 15px);
+        padding: 25px;
+    }
+    .client-1 img {
+        width: 80px;
+        height: 80px;
+    }
+    .client-1 p {
+        font-size: 14px;
+    }
+    .written {
+        font-size: 13px;
+    }
+    footer img{
+        display: none;
+    }
+
+    /* Footer */
+    .footer1 {
+        /* padding: 40px 20px; */
+        text-align: center;
+        height: 45%;
+    }
+    .foot-image{
+        display: none;
+    }
+    .footer1 .footer-text1 {
+        width: 100%;
+        text-align: center;
+    }
+    .footer1 .footer-text1 h4 {
+        font-size: 20px;
+    }
+    .footer1 .footer-text1 h5 {
+        font-size: 14px;
+        margin: 20px auto;
+        max-width: 80%;
+    }
+    .footer2 {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+        height: 50%;
+    }
+    .footer2 .foot-left,
+    .footer2 .foot-right {
+        width: 100%;
+        text-align: center;
+    }
+    .footer2 .icons-container {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .footer2 .left-text h5{
+        font-size: 20px;
+    }
+    .footer2 .left-text h6{
+        font-size: 18px;
+    }
+    /* .footer2 .icons-container a{
+        width: 10px;
+        height: 10px;
+        font-size: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } */
+    
+    /* .footer2 .foot-right .icons-container a i{
+        
+    } */
 }
 
 /* Large Tablets & Small Laptops (769px to 1024px) */
@@ -716,5 +878,182 @@ footer {
     /* Page 2-6 common styles */
     #page2, #page3, #page4, #page5, #page6 {
         padding: 50px 30px;
+    }
+}
+
+/* Extra Small Devices (320px to 375px) - iPhone SE, iPhone 8, etc. */
+@media (min-width: 320px) and (max-width: 375px) {
+    /* Navigation */
+    nav {
+        padding: 8px;
+    }
+    nav img {
+        width: 100px;
+    }
+    nav .icons {
+        display: none; /* Hide icons on very small screens */
+    }
+
+    /* Page 1 */
+    #page1 {
+        padding-top: 60px;
+        height: auto;
+        min-height: 100vh;
+    }
+    #page1 .text-p h6 {
+        font-size: 12px;
+    }
+    #page1 .text-p h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    #page1 .content {
+        width: 95%;
+        margin: 15px auto;
+        padding: 15px 10px;
+    }
+    .services-grid {
+        gap: 12px;
+        padding: 10px;
+    }
+    .service-box {
+        width: calc(33.33% - 8px); /* 3 boxes per row */
+        height: auto;
+        min-height: 80px;
+    }
+    .service-box .service-img {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .service-box p {
+        font-size: 7px !important;
+        margin-top: 5px;
+    }
+    #page1 .last {
+        font-size: 9px;
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    /* Page 2 */
+    #page2 {
+        height: auto;
+        padding: 30px 15px;
+    }
+    #page2 .page2-text h2 {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+    #page2 .page2-text h6 {
+        font-size: 7px;
+    }
+    #page2 .image2-cont img {
+        width: 85%;
+        height: 120px;
+    }
+
+    /* Page 3 & 4 */
+    #page3, #page4 {
+        height: auto;
+        padding: 30px 15px;
+    }
+    .image-Cont {
+        margin-bottom: 20px;
+    }
+    .service-box-c p {
+        font-size: 10px;
+    }
+
+    /* Page 5 */
+    #page5 {
+        padding: 30px 15px;
+    }
+    #page5 h1 {
+        font-size: 8vw;
+        padding-top: 20px;
+    }
+    #page5 p {
+        font-size: 12px;
+        padding-top: 15px;
+    }
+    #page5 .page5-img-cont img {
+        width: 95%;
+    }
+
+    /* Page 6 */
+    #page6 {
+        padding: 30px 15px;
+    }
+    #page6 h3 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+    .client-1 {
+        padding: 15px;
+    }
+    .client-1 img {
+        width: 40px;
+        height: 40px;
+    }
+    .client-1 p {
+        font-size: 10px;
+    }
+    .written {
+        font-size: 9px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 15px;
+    }
+    .footer1 .footer-text1 {
+        width: 100%;
+        padding: 15px;
+    }
+    .footer1 .footer-text1 h4 {
+        font-size: 16px;
+    }
+    .footer1 .footer-text1 h5 {
+        font-size: 10px;
+    }
+    .footer2 .foot-left h5 {
+        font-size: 14px;
+    }
+    .footer2 .foot-left h6 {
+        font-size: 10px;
+    }
+    .footer2 .foot-right .icons-container a i {
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Small Devices (376px to 414px) - iPhone 12/13/14, iPhone X/XS/11 Pro */
+@media (min-width: 376px) and (max-width: 414px) {
+    /* Slightly larger sizes than the previous breakpoint */
+    nav img {
+        width: 110px;
+    }
+    #page1 .text-p h6 {
+        font-size: 14px;
+    }
+    #page1 .text-p h2 {
+        font-size: 22px;
+    }
+    .service-box p {
+        font-size: 8px !important;
+    }
+    #page2 .page2-text h2 {
+        font-size: 13px;
+    }
+    .written {
+        font-size: 10px;
+    }
+    .footer1 .footer-text1 h4 {
+        font-size: 18px;
+    }
+    .footer1 .footer-text1 h5 {
+        font-size: 11px;
     }
 }
