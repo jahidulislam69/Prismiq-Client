@@ -620,7 +620,7 @@ footer {
     .footer2 .foot-left, 
     .footer2 .foot-right {
         width: 100%;
-        padding: 20px;
+        /* padding: 20px; */
     }
     .footer2 .left-text{
         text-align: center;
@@ -630,6 +630,9 @@ footer {
     }
     .footer2 .left-text h6{
         font-size: 25px;
+    }
+    footer .footer2 a i{
+        font-size: 20px !important;
     }
 }
 /* Tablets (481px to 768px) */
@@ -671,8 +674,8 @@ footer {
         gap: 25px;
         padding: 15px;
     }
-    .service-box {
-        width: 25%;
+    #page1 .service-box {
+        width: 20%;
         height: 30%;
         
     }
@@ -1050,17 +1053,30 @@ footer {
     nav img {
         width: 110px;
     }
+    #page1{
+        height: 60vh;
+    }
     #page1 .text-p h6 {
         font-size: 14px;
     }
     #page1 .text-p h2 {
         font-size: 22px;
     }
+    #page1 .service-box{
+        width: 20%;
+    }
     .service-box p {
         font-size: 8px !important;
     }
+    #page2{
+        height: 40vh;
+    }
     #page2 .page2-text h2 {
         font-size: 13px;
+        line-height: 25px;
+    }
+    #page4 p{
+        text-align: center;
     }
     .written {
         font-size: 10px;
@@ -1070,5 +1086,14 @@ footer {
     }
     .footer1 .footer-text1 h5 {
         font-size: 11px;
+    }
+    #page5 .line, .line2{
+        display: none;
+    }
+    #page6 .client-1 p{
+        font-size: 10px;
+    }
+    footer .footer2 h6{
+        font-size: 10px !important;
     }
 }
