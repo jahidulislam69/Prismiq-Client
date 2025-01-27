@@ -157,7 +157,7 @@ nav .icons{
 #page2 .page2-text h2{
     font-size: 4vw;
     font-family: Brodille;
-    line-height: 65px;
+    line-height: 90px;
 }
 #page2 .page2-text h6{
     font-size: .9vw;
@@ -535,7 +535,7 @@ footer {
     }
     #page2 .page2-text h6 {
         font-size: 8px;
-    text-align: center;
+        text-align: center;
     }
     #page2 .image2-cont img {
         width: 80%;
